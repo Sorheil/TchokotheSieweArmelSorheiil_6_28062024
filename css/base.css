@@ -1,0 +1,51 @@
+/*global style */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "./components/components.css";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+
+:root {
+    --primary-color: #901C1C;
+    --secondary-color-1: #D3573C;
+    --secondary-color-2: #FAFAFA;
+    --primary-text-color: #D3573C;
+    --secondary-text-color-1: #525252;
+    --secondary-text-color-2: #901C1C;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*for screen reader*/
+.sr-only {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/*blur on screen to show modal */
+.backdrop {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-open{
+    overflow: hidden;
+}

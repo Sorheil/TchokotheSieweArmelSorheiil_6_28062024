@@ -1,0 +1,14 @@
+/* tagcomponents*/
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    height: 22px;
+    border-radius: 11px;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0.5px solid var(--secondary-text-color-1);
+    color: var(--secondary-text-color-2);
+}

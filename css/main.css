@@ -1,0 +1,179 @@
+@import"./base.css";
+
+/*skip-to-content*/
+.skip-to-content {
+    position: fixed;
+    transform: translateY(-100%);
+    padding: 10px;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--secondary-color-1);
+}
+
+.skip-to-content:focus {
+    transform: translateY(0px);
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*header*/
+header {
+    position: absolute;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+    padding: 42px 100px;
+    width: calc(100% - 300px);
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+
+
+/* main*/
+main h1 {
+    position: absolute;
+    right: 0;
+    padding: 42px 100px;
+    font-family: DM Sans;
+    font-size: 36px;
+    font-weight: 400;
+    color: #901C1C;
+}
+
+/*section photographer*/
+.photographers-wrapper {
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
+    padding: 202px 72px 60px;
+    row-gap: 50px;
+}
+
+.photographer-card {
+    max-width: 263px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: DM Sans;
+    text-align: center;
+    font-weight: 400;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.photographer-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.photographer-card h2 {
+    font-size: 36px;
+    line-height: 46.87px;
+    white-space: nowrap;
+    color: var(--secondary-color-1);
+
+}
+
+.photographer-card .city {
+    font-size: 13px;
+    line-height: 16.93px;
+    text-align: center;
+
+}
+
+.photographer-card .tagline {
+    font-size: 10px;
+    line-height: 13.02px;
+
+}
+
+.photographer-card .price {
+    font-size: 9px;
+    line-height: 11.72px;
+    color: var(--secondary-text-color-1);
+
+
+}
+
+.photographer-card .tags-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 8px;
+}
+
+@media screen and (max-width:767px) {
+
+    header {
+        flex-direction: column;
+        column-gap: 0;
+        padding: 40px 20px;
+        width: auto;
+    }
+
+    .help {
+        display: none;
+    }
+
+    .logo {
+        width: 150px;
+        height: 38px;
+    }
+
+    a:has(.logo) {
+        align-self: self-start;
+    }
+
+    nav {
+        padding: 39px;
+        row-gap: 5px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    main h1 {
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.23px;
+        padding: 52px 0px;
+        right: 20px;
+    }
+
+    /*section photograher*/
+    .photographers-wrapper {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        grid-template-columns: repeat(1, auto);
+        padding: 225px 88px 60px;
+        column-gap: 20px;
+    }
+}

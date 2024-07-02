@@ -1,0 +1,600 @@
+@import"./base.css";
+
+/*header*/
+header {
+    padding: 42px 100px;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+}
+
+/*main */
+main {
+    padding: 0px 100px;
+}
+
+
+/*section photograph-header*/
+.photographer-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 25px;
+    font-weight: 400;
+    font-family: DM Sans;
+    background-color: var(--secondary-color-2);
+
+}
+
+.photographer-header h2 {
+    font-family: DM Sans;
+    font-size: 64px;
+    line-height: 83.33px;
+    text-align: left;
+    color: var(--primary-text-color);
+}
+
+.photographer-header p {
+    font-size: 24px;
+    line-height: 31.25px;
+    text-align: left;
+    color: var(--secondary-text-color-2);
+
+}
+
+.photographer-header .tagline {
+    font-size: 18px;
+    line-height: 23.44px;
+    text-align: left;
+    color: var(--secondary-text-color-1);
+}
+
+.photographer-header .tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    margin-top: 15px;
+}
+
+.cta {
+    margin-right: auto;
+    margin-left: 30px;
+    width: 170px;
+    height: 69px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color-1);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.04px;
+    cursor: pointer;
+}
+
+.cta:hover,
+.cta:focus {
+    background-color: var(--primary-color);
+}
+
+.wrapper-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.photographer-header img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+/*sort menu*/
+label[ for="dropdown-button"] {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.44px;
+    margin-right: 15px;
+    margin-top: 20px;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: DM Sans;
+    margin-top: 20px;
+
+}
+
+#dropdown-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.rotate {
+    transform: rotate(0.5turn);
+
+}
+
+.dropdown button {
+    width: 170px;
+    padding: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    background-color: var(--primary-color);
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 170px;
+    border-radius: 5px;
+    z-index: 1000;
+
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 18px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    position: relative;
+}
+
+.dropdown-content button::before {
+    content: "";
+    width: 90%;
+    height: 1px;
+    top: 0px;
+    left: 50%;
+    background-color: white;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.show {
+    display: block;
+    transform: translateY(-6px);
+}
+
+/* photograph detail */
+.photographer-details {
+    position: fixed;
+    width: 376px;
+    right: 36px;
+    bottom: -5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color-1);
+    padding: 15px 20px;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+.counter-likes-photographer {
+    margin-right: 5px;
+
+}
+
+/*section media cards*/
+.wrapper-media-cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    padding: 70px 0px;
+}
+
+
+.media-card {
+    width: 350px;
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary-text-color-2);
+    font-weight: 400;
+}
+
+.media-card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.media-card video {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: none;
+}
+
+.media-card-description {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media-card-description .title {
+    width: 200px;
+}
+
+.wrapper-likes .unliked {
+    color: white;
+    -webkit-text-stroke: 3px var(--secondary-text-color-2);
+
+}
+
+.wrapper-likes .liked {
+    color: var(--secondary-text-color-2);
+    -webkit-text-stroke: 0px var(--secondary-text-color-2);
+
+}
+
+/* icon to play video*/
+.video-container {
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: var(--secondary-text-color-2);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.video-container:hover .play-button {
+    opacity: 1;
+}
+
+
+/*modal*/
+
+
+/*modalform*/
+.modal-form {
+    width: 500px;
+    padding: 20px;
+    background-color: #D3573C;
+    font-family: DM Sans;
+    position: fixed;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+}
+
+.modal-form h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.form-data {
+    width: 100%;
+}
+
+.form-data label {
+    display: block;
+    font-family: DM Sans;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--secondary-text-color-1);
+}
+
+.modal-form input {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+.modal-form textarea {
+    width: 100%;
+    height: 142px;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.modal-form input[type="submit"] {
+    width: 170px;
+    height: 50px;
+    /* justify-self: start; */
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 10px;
+}
+
+.modal-form .close-popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal-form .close-popup i {
+    font-size: 50px;
+    color: white;
+}
+
+/* lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.media-container {
+    position: relative;
+}
+
+.lightbox img,
+.lightbox video {
+    max-width: 90vw;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+#lightbox-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary-text-color-2);
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.nav-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
+}
+
+.nav-button i {
+    font-size: 40px;
+    color: var(--secondary-text-color-2);
+}
+
+#prev-media {
+    left: -20px;
+}
+
+#next-media {
+    right: -20px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: -10px;
+    right: -40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-lightbox i {
+    font-size: 40px;
+    color: var(--secondary-text-color-2);
+}
+
+
+@media screen and (max-width:767px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 38px;
+    }
+
+    main {
+        padding: 0px 20px;
+    }
+
+    .photographer-header {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        font-weight: 400;
+        font-family: DM Sans;
+
+    }
+
+    .photographer-header h2 {
+        color: var(--primary-text-color);
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 46.87px;
+        text-align: left;
+
+    }
+
+    .photographer-header p {
+        color: var(--secondary-text-color-2);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.93px;
+        text-align: left;
+
+    }
+
+    .photographer-header .tagline {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.93px;
+        color: var(--secondary-text-color-1);
+
+    }
+
+    .photographer-header .tags-wrapper {
+        flex-wrap: wrap;
+        column-gap: 8px;
+        position: relative;
+        top: 5px;
+        row-gap: 5px;
+    }
+
+    .cta {
+        width: 170px;
+        height: 35px;
+        margin: 0px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26.04px;
+        position: fixed;
+        bottom: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .wrapper-portrait {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .photographer-header img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /*dropdown*/
+    .dropdown {
+        display: none;
+    }
+
+    label[ for="dropdown-button"] {
+        display: none;
+    }
+
+
+    /* photograph detail */
+
+    .photographer-details {
+        display: none;
+
+    }
+
+
+    /*section media cards*/
+    .wrapper-media-cards {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, auto);
+        gap: 20px;
+    }
+
+
+
+    .modal-form {
+        width: 100%;
+        padding: 20px 20px 80px;
+        height: 100%;
+    }
+
+    .modal-form h1 {
+        font-size: 40px;
+    }
+
+    .close-popup i {
+        font-size: 12px;
+    }
+
+    .modal-form input[type="submit"] {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /*lightbox*/
+    .lightbox {
+        padding: 0px;
+    }
+
+    .lightbox img,
+    .lightbox video {
+        width: 289.13px;
+        height: 248px;
+        border-radius: 5px;
+    }
+
+    #lightbox-title {
+        font-size: 14px;
+        width: 289.13px;
+    }
+
+    .nav-button i {
+        font-size: 20px;
+        color: var(--secondary-text-color-2);
+    }
+
+    #prev-media {
+        left: -15px;
+    }
+
+    #next-media {
+        right: -15px;
+    }
+
+    .close-lightbox {
+        top: -10px;
+        right: -20px;
+
+    }
+
+
+
+}

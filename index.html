@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/png">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Accueil</title>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Passer au contenu</a>
+
+    <header role="banner">
+        <a href="./index.html"><img src="./assets/logo/logo.png" alt="Fisheye Home page" class="logo"></a>
+        <nav aria-label="photographer categories">
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Portrait</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Art</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Fashion</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Architecture</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Travel</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Sport</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Animals</a>
+            <a href="#" class="tag"><span aria-hidden="true">#</span><span class="sr-only">Tag</span> Events</a>
+        </nav>
+    </header>
+    <main id="main-content" aria-labelledby="photographers-title">
+        <h1 id="photographers-title">Nos photographes</h1>
+        <section class="photographers-wrapper">
+        </section>
+    </main>
+
+    <!-- api -->
+    <script src="./scripts/api/Api.js"></script>
+    <!-- templates -->
+    <script src="./scripts/templates/PhotographerCard.js"></script>
+    <!-- models -->
+    <script src="./scripts/models/Photographer.js"></script>
+    <!-- main script -->
+    <script src="./scripts/pages/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/photographer.css">
+    <title>Photographe</title>
+</head>
+
+<body>
+    <div id="backdrop" class="backdrop"></div>
+    <header>
+        <a href="./index.html"><img src="./assets/logo/logo.png" alt="Fisheye Home page" class="logo"></a>
+    </header>
+    <main>
+        <!-- dropdown menu -->
+        <label for="dropdown-button">Trier par </label>
+        <div class="dropdown">
+            <button id="dropdown-button" class="btn-sort-by-popularity">Popularité<i
+                    class="fa-solid fa-chevron-down icon-dropdown"></i></button>
+            <div class="dropdown-content" id="dropdown-content">
+                <button class="btn-sort-by-date">Date</button>
+                <button class="btn-sort-by-title">Titre</button>
+            </div>
+        </div>
+
+        <section class="wrapper-media-cards"></section>
+    </main>
+
+    <!-- lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="media-container">
+            <img id="lightbox-img" src="" alt="">
+            <video id="lightbox-video" controls></video>
+            <p id="lightbox-title"></p>
+            <button id="close-lightbox" class="close-lightbox"><i class="fas fa-times"></i></button>
+        </div>
+        <a id="prev-media" class="nav-button"><i class="fas fa-chevron-left"></i></a>
+        <a id="next-media" class="nav-button"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- api -->
+    <script src="./scripts/api/Api.js"></script>
+    <!-- models -->
+    <script src="./scripts/models/Photographer.js"></script>
+    <!-- factories -->
+    <script src="./scripts/factories/MediaFactory.js"></script>
+    <!-- templates -->
+    <script src="./scripts/templates/PhotographHeader.js"></script>
+    <script src="./scripts/templates/CounterLike.js"></script>
+    <script src="./scripts/templates/MediaCard.js"></script>
+    <script src="./scripts/templates/ModalForm.js"></script>
+    <!-- main script -->
+    <script src="./scripts/pages/photographers.js"></script>
+</body>
+
+</html>
