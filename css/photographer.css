@@ -64,7 +64,7 @@ main {
     height: 69px;
     border-radius: 5px;
     border: none;
-    background-color: var(--secondary-color-1);
+    background-color: var(--primary-color);
     color: white;
     font-size: 20px;
     font-weight: 700;
@@ -74,7 +74,8 @@ main {
 
 .cta:hover,
 .cta:focus {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color-1);
+    color: black;
 }
 
 .wrapper-portrait {
@@ -325,14 +326,15 @@ label[ for="dropdown-button"] {
     padding: 10px;
 }
 
-.modal-form input[type="submit"] {
+.modal-form .btn-submit {
     width: 170px;
     height: 50px;
-    /* justify-self: start; */
     font-size: 18px;
     background-color: var(--primary-color);
     color: white;
     margin-top: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .modal-form .close-popup {
@@ -373,6 +375,7 @@ label[ for="dropdown-button"] {
     margin: 0 auto;
     border-radius: 5px;
     object-fit: contain;
+
 }
 
 #lightbox-title {
@@ -501,7 +504,6 @@ label[ for="dropdown-button"] {
         height: 100px;
         border-radius: 50%;
         overflow: hidden;
-        border: 5px solid rgba(255, 255, 255, 0.1);
     }
 
     .photographer-header img {
@@ -553,7 +555,7 @@ label[ for="dropdown-button"] {
         font-size: 12px;
     }
 
-    .modal-form input[type="submit"] {
+    .modal-form .btn-submit {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -595,6 +597,7 @@ label[ for="dropdown-button"] {
 
     }
 
-
-
+    .close-lightbox i {
+        font-size: 22px;
+    }
 }

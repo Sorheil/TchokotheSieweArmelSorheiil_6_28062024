@@ -1,27 +1,27 @@
 class PhotographHeader {
-    constructor(photographer) {
-        this._photographer = photographer;
-    }
+  constructor(photographer) {
+    this._photographer = photographer;
+  }
 
-    createPhotographHeader() {
-        const wrapper = document.createElement('section');
-        // add class wrapper
-        wrapper.classList.add('photographer-header')
-        // paths portrait
-        const pathPortrait = `./assets/SamplePhotos/Photographers ID Photos/${this._photographer.portrait}`;
+  createPhotographHeader() {
+    const wrapper = document.createElement('section');
+    // add class wrapper
+    wrapper.classList.add('photographer-header');
+    // paths portrait
+    const pathPortrait = `./assets/SamplePhotos/Photographers ID Photos/${this._photographer.portrait}`;
 
-        // Creating the tags
-        console.log(this._photographer["tags"])
+    // Creating the tags
+    console.log(this._photographer['tags']);
 
-        const tags = this._photographer.tags.map(tag => {
-            const tagLink = document.createElement('a');
-            tagLink.href = '#';
-            tagLink.classList.add('tag');
-            tagLink.innerHTML = `<span aria-hidden="true">#</span><span class="sr-only">Tag</span> ${tag}`
-            return tagLink.outerHTML;
-        }).join('');
+    const tags = this._photographer.tags.map(tag => {
+      const tagLink = document.createElement('a');
+      tagLink.href = '#';
+      tagLink.classList.add('tag');
+      tagLink.innerHTML = `<span aria-hidden="true">#</span><span class="sr-only">Tag</span> ${tag}`;
+      return tagLink.outerHTML;
+    }).join('');
 
-        const content = `
+    const content = `
             <div class="details">
                 <h2>${this._photographer.name}</h2>
                 <p>
@@ -34,7 +34,7 @@ class PhotographHeader {
                 </div>
             </div>
 
-            <button class="cta">
+            <button class="cta" aria-label="Contact Me">
                 contactez-moi
             </button>
 
@@ -42,7 +42,7 @@ class PhotographHeader {
                 <img src="${pathPortrait}" alt="${this._photographer.name}">
             </div>
         `;
-        wrapper.innerHTML = content;
-        return wrapper;
-    }
+    wrapper.innerHTML = content;
+    return wrapper;
+  }
 }

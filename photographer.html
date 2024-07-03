@@ -19,13 +19,19 @@
     </header>
     <main>
         <!-- dropdown menu -->
-        <label for="dropdown-button">Trier par </label>
-        <div class="dropdown">
-            <button id="dropdown-button" class="btn-sort-by-popularity">Popularité<i
-                    class="fa-solid fa-chevron-down icon-dropdown"></i></button>
-            <div class="dropdown-content" id="dropdown-content">
-                <button class="btn-sort-by-date">Date</button>
-                <button class="btn-sort-by-title">Titre</button>
+        <div class="sort-menu">
+            <label for="dropdown-button">Trier par </label>
+            <div class="dropdown" id="dropdown">
+                <button id="dropdown-button" class="btn-sort-by-popularity" aria-haspopup="listbox"
+                    aria-expanded="false" aria-controls="dropdown-content">
+                    Popularité
+                    <span><i class="fa-solid fa-chevron-down icon-dropdown"></i></span>
+                </button>
+                <div class="dropdown-content" id="dropdown-content" role="listbox" aria-labelledby="dropdown-button"
+                    hidden>
+                    <button class="btn-sort-by-date" role="option">Date</button>
+                    <button class="btn-sort-by-title" role="option">Titre</button>
+                </div>
             </div>
         </div>
 
@@ -33,15 +39,17 @@
     </main>
 
     <!-- lightbox -->
-    <div id="lightbox" class="lightbox">
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="image closeup view">
         <div class="media-container">
             <img id="lightbox-img" src="" alt="">
             <video id="lightbox-video" controls></video>
             <p id="lightbox-title"></p>
-            <button id="close-lightbox" class="close-lightbox"><i class="fas fa-times"></i></button>
         </div>
-        <a id="prev-media" class="nav-button"><i class="fas fa-chevron-left"></i></a>
-        <a id="next-media" class="nav-button"><i class="fas fa-chevron-right"></i></a>
+        <button id="close-lightbox" class="close-lightbox" aria-label="Close dialog"><i
+                class="fas fa-times"></i></button>
+        <a href="#" id="prev-media" class="nav-button" aria-label="previous-image"><i
+                class="fas fa-chevron-left"></i></a>
+        <a href="#" id="next-media" class="nav-button" aria-label="Next-image"><i class="fas fa-chevron-right"></i></a>
     </div>
 
     <!-- api -->

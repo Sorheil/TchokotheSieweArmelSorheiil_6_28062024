@@ -26,6 +26,7 @@ a {
 
 li {
     list-style: none;
+    display: inline;
 }
 
 /*for screen reader*/

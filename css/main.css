@@ -1,4 +1,5 @@
 @import"./base.css";
+@import"./components/components.css";
 
 /*skip-to-content*/
 .skip-to-content {
@@ -36,7 +37,7 @@ header {
     height: 50px;
 }
 
-nav {
+nav ul {
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
@@ -150,7 +151,7 @@ main h1 {
         align-self: self-start;
     }
 
-    nav {
+    nav ul {
         padding: 39px;
         row-gap: 5px;
         justify-content: center;

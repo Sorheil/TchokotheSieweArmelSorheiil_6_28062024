@@ -1,4 +1,6 @@
 /* tagcomponents*/
+@import"./../base.css";
+
 .tag {
     display: flex;
     justify-content: center;
@@ -11,4 +13,11 @@
     font-weight: 500;
     border: 0.5px solid var(--secondary-text-color-1);
     color: var(--secondary-text-color-2);
+}
+
+.tag:hover,
+.tag:focus {
+    background-color: var(--primary-color);
+    color: var(--secondary-color-2);
+
 }

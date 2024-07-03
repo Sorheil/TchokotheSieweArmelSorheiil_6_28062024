@@ -1,12 +1,11 @@
 class MediaFactory {
-    static createMediaCard(data, author) {
-        if (data.hasOwnProperty('image')) {
-            return new PictureCard(data, author)
-        } else if (data.hasOwnProperty('video')) {
-            return new VideoCard(data, author)
-        } else {
-            throw new Error('Unknown card type');
-
-        }
+  static createMediaCard(data, author) {
+    if ('image' in data) {
+      return new PictureCard(data, author);
+    } else if ('video' in data) {
+      return new VideoCard(data, author);
+    } else {
+      throw new Error('Unknown card type');
     }
+  }
 }
