@@ -562,14 +562,14 @@ label[ for="dropdown-button"] {
     }
 
     /*lightbox*/
-    .lightbox {
+    /* .lightbox {
         padding: 0px;
-    }
+    } */
 
     .lightbox img,
     .lightbox video {
         width: 289.13px;
-        height: 248px;
+        height: auto;
         border-radius: 5px;
     }
 
