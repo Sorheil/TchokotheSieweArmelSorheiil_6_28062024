@@ -1,14 +1,14 @@
 class ModalForm {
-    constructor() {
-    }
+  constructor() {
+  }
 
-    createModalForm() {
-        const $wrapper = document.createElement('form');
-        $wrapper.classList.add('modal-form');
-        $wrapper.setAttribute('role', 'dialog');
-        $wrapper.setAttribute('aria-labelledby', 'modal-title');
-        // $wrapper.setAttribute('aria-hidden', 'true')
-        const content = `
+  createModalForm() {
+    const $wrapper = document.createElement('form');
+    $wrapper.classList.add('modal-form');
+    $wrapper.setAttribute('role', 'dialog');
+    $wrapper.setAttribute('aria-labelledby', 'modal-title');
+    // $wrapper.setAttribute('aria-hidden', 'true')
+    const content = `
             <h1 id="modal-title">Contactez-moi<br>Mimi Keel</h1>
             <div class="form-data">
                 <div class="form-prename">
@@ -31,8 +31,8 @@ class ModalForm {
             <button class="btn-submit" type="submit" aria-label="send">Envoyer</button>
             <button class="close-popup" type="button" aria-label="Close Contact form"><i class="fa-solid fa-xmark"></i></button>
         `;
-        $wrapper.innerHTML = content;
+    $wrapper.innerHTML = content;
 
-        return $wrapper;
-    }
+    return $wrapper;
+  }
 }

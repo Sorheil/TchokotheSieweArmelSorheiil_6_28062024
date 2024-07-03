@@ -23,7 +23,7 @@ async function main() {
 
 
   // Insert photographer counter like
-  const $sortMenu = document.querySelector('.sort-menu')
+  const $sortMenu = document.querySelector('.sort-menu');
   const counterLike = new CounterLike(photographer, media);
   $main.insertBefore(counterLike.createPhotographerDetail(), $sortMenu);
 
@@ -32,8 +32,8 @@ async function main() {
   const $iconDropdown = document.querySelector('.icon-dropdown');
 
   $dropdownButton.addEventListener('focus', () => {
-    $iconDropdown.click()
-  })
+    $iconDropdown.click();
+  });
 
   $iconDropdown.addEventListener('click', function (event) {
     event.stopPropagation();
@@ -63,15 +63,15 @@ async function main() {
   // Sort media function
   function sortMedia(criteria) {
     switch (criteria) {
-      case 'popularity':
-        media.sort((a, b) => b.likes - a.likes);
-        break;
-      case 'date':
-        media.sort((a, b) => new Date(b.date) - new Date(a.date));
-        break;
-      case 'title':
-        media.sort((a, b) => a.title.localeCompare(b.title));
-        break;
+    case 'popularity':
+      media.sort((a, b) => b.likes - a.likes);
+      break;
+    case 'date':
+      media.sort((a, b) => new Date(b.date) - new Date(a.date));
+      break;
+    case 'title':
+      media.sort((a, b) => a.title.localeCompare(b.title));
+      break;
     }
 
     // Insert sorted media
@@ -92,9 +92,9 @@ async function main() {
   $cta.addEventListener('click', function (event) {
     event.preventDefault();
     openModal($modalForm);
-    $modalForm.click()
-    prename.focus()
-    makeAllNonFocusableExcept($modalForm )
+    $modalForm.click();
+    prename.focus();
+    makeAllNonFocusableExcept($modalForm );
   });
 
   // Close modal form
@@ -102,7 +102,7 @@ async function main() {
   $closeModalBtn.addEventListener('click', function (event) {
     event.preventDefault();
     closeModal($modalForm);
-    makeAllFocusable()
+    makeAllFocusable();
   });
 
   // Handle form submission
@@ -131,8 +131,6 @@ function openModal($modalForm) {
   backdrop.style.display = 'block';
   document.body.classList.add('modal-open');
   backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-
-
 }
 
 // Close modal function
@@ -186,8 +184,8 @@ function initLightbox() {
     lightboxTitle.textContent = title;
     lightbox.style.display = 'flex';
 
-    lightbox.click()
-    lightbox.focus
+    lightbox.click();
+    lightbox.focus;
 
   }
 
@@ -205,9 +203,9 @@ function initLightbox() {
       e.preventDefault();
       currentIndex = index;
       openLightbox(card);
-      document.getElementById('close-lightbox').focus()
-      newlightbox = document.querySelector('.lightbox')
-      makeAllNonFocusableExcept(newlightbox)
+      document.getElementById('close-lightbox').focus();
+      newlightbox = document.querySelector('.lightbox');
+      makeAllNonFocusableExcept(newlightbox);
 
     });
   });
@@ -218,7 +216,7 @@ function initLightbox() {
     const backdrop = document.querySelector('.backdrop');
     backdrop.style.display = 'none';
     document.body.classList.remove('modal-open');
-    makeAllFocusable()
+    makeAllFocusable();
   });
 
   // Previous media event listener
@@ -237,17 +235,17 @@ function initLightbox() {
   document.addEventListener('keydown', (event) => {
     if (lightbox.style.display === 'flex') {
       switch (event.key) {
-        case 'ArrowRight':
-          currentIndex++;
-          updateLightbox();
-          break;
-        case 'ArrowLeft':
-          currentIndex--;
-          updateLightbox();
-          break;
-        case 'Escape':
-          document.getElementById('close-lightbox').click();
-          break;
+      case 'ArrowRight':
+        currentIndex++;
+        updateLightbox();
+        break;
+      case 'ArrowLeft':
+        currentIndex--;
+        updateLightbox();
+        break;
+      case 'Escape':
+        document.getElementById('close-lightbox').click();
+        break;
       }
     }
   });
@@ -283,32 +281,24 @@ function addLikeHandler() {
 }
 
 function makeAllNonFocusableExcept(elementToKeepFocusable) {
-  // Récupérer tous les éléments de la page
   const allElements = document.querySelectorAll('*');
-
-  // Parcourir tous les éléments
   allElements.forEach(element => {
-    // Vérifier si l'élément n'est pas celui que nous voulons garder focusable et n'est pas un enfant de cet élément
     if (element !== elementToKeepFocusable && !elementToKeepFocusable.contains(element)) {
-      element.setAttribute('tabindex', '-1'); // Rendre l'élément non focusable
+      element.setAttribute('tabindex', '-1'); 
     } else {
-      element.removeAttribute('tabindex'); // Retirer l'attribut tabindex s'il existe (pour les enfants de l'élément à garder focusable)
+      element.removeAttribute('tabindex'); 
     }
   });
 }
 
 function makeAllFocusable() {
-  // Récupérer tous les éléments de la page
   const allElements = document.querySelectorAll('*');
 
-  // Parcourir tous les éléments
   allElements.forEach(element => {
-    // Retirer l'attribut tabindex s'il existe
     element.removeAttribute('tabindex');
   });
 }
 
-// Appeler la fonction pour rendre tous les éléments focusables
 makeAllFocusable();
 
 
